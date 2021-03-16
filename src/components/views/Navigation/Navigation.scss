@@ -2,21 +2,78 @@
 @import '../../../styles/mixins.scss';
 
 .Navigation {
+  margin-top: 5rem;
   &__List {
     display: inline;
     list-style-type: none;
+
+    @include respond(xsmall) {
+      display: none;
+    }
     &-li {
-      font-size: $font-large;
-      font-weight: 700;
-      padding: 1rem;
-      margin: 0 2rem;
-      color: $color-font-dark;
-      transition: all 0.4s;
+      padding: 2rem;
+      & a {
+        font-size: $font-large;
+        font-weight: 700;
+        color: $color-font-dark;
+        transition: all 0.4s;
+      }
     }
 
-    &-li:hover {
+    &-li a:hover {
       color: $color-font-alt;
       font-size: $font-big;
+    }
+  }
+
+  &__Mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 65%;
+    font-size: 2.2rem;
+    font-family: $font-header;
+    font-weight: 600;
+    text-align: center;
+
+    &-li {
+      display: block;
+      text-align: left;
+      padding: 3rem;
+    }
+  }
+
+  &-btn {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+    cursor: pointer;
+  }
+
+  span {
+    display: none;
+    width: 3rem;
+    height: 2.5px;
+    background: $color-font-dark;
+
+    @include respond(xsmall) {
+      display: block;
+    }
+  }
+
+  @keyframes splashIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
