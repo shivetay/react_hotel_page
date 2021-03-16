@@ -1,0 +1,13 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Logo {
+  height: 10rem;
+  margin: 2rem;
+  position: relative;
+  left: -10%;
+
+  &__Img {
+    height: 100%;
+  }
+}

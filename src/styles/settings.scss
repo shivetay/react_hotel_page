@@ -1,5 +1,36 @@
 /* colors */
 
+$color-main: #ffd700;
+$color-main-opa: #cf9b23d8;
+$color-bacground: #ececec;
+// $color-bacground-second: #81c8c1;
+// $color-second: #767e84;
+// $color-second-opa: #767e8493;
+// $color-third: #a5938a;
+// $color-third-opa: #a5938ac2;
+// $color-card: #cf9c23;
+// $color-dark: #233735;
+// $color-dark-opa: #233735c5;
+
+$color-font-dark: #525c54;
+// $color-font-main: #54432d;
+$color-font-alt: #5f0d0d;
+// $color-font-light: #fffcf8;
+// $color-font-contrast: #ab586e;
+// $color-font-contrast-second: #c29e5b;
+// $color-font-hover: #ab586e;
+
+// $hover-link: #cf9c23;
+
+// $color-btutton: #cf9c23;
+// $color-btutton-second: #eee0d7;
+// $color-btutton-opa: #cf9b238f;
+// $color-hover: #81c8c1;
+// $color-hover-second: #ab586e;
+// $color-button-font: #ab586e;
+// $color-button-second: #fffcf8b6;
+// $color-outline: #81c8c1;
+
 /* fonts */
 
 $font-small: 1.2rem;
@@ -12,6 +43,9 @@ $header-h1: 2.8rem;
 $header-h2: 2.6rem;
 $header-h3: 2.4rem;
 $header-h4: 2.2rem;
+
+$font-paragraph: 'Poiret One', cursive;
+$font-header: 'Cinzel', serif;
 
 /* Brakepoints */
 $bp-xldesktop: 120em; // 1900px/16 = 125em rozdzielczosc/16px

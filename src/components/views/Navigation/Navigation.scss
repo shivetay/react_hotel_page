@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Navigation {
+  &__List {
+    display: inline;
+    list-style-type: none;
+    &-li {
+      font-size: $font-large;
+      font-weight: 700;
+      padding: 1rem;
+      margin: 0 2rem;
+      color: $color-font-dark;
+      transition: all 0.4s;
+    }
+
+    &-li:hover {
+      color: $color-font-alt;
+      font-size: $font-big;
+    }
+  }
+}

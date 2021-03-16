@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 class Home extends Component {
@@ -8,14 +8,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Home</h1>
-        <p>nawigacja</p>
+      <Fragment>
         <p>slider</p>
         <p>oferta</p>
         <p>rezerwacje</p>
         <p>kontakt</p>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -1,0 +1,12 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: linear-gradient(to bottom right, $color-main, $color-main-opa);
+  height: 10rem;
+  width: 100vw;
+}
