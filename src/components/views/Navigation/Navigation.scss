@@ -2,11 +2,11 @@
 @import '../../../styles/mixins.scss';
 
 .Navigation {
-  margin-top: 5rem;
+  display: flex;
+  align-items: center;
   &__List {
     display: inline;
     list-style-type: none;
-
     @include respond(xsmall) {
       display: none;
     }

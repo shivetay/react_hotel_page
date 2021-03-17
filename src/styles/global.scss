@@ -12,6 +12,7 @@
 }
 body {
   font-family: $font-paragraph;
+  overflow-x: hidden;
 }
 
 html {
@@ -41,6 +42,12 @@ a {
 
 li {
   display: inline;
+}
+
+//TODO:
+
+button:focus {
+  outline: none;
 }
 
 #root {
