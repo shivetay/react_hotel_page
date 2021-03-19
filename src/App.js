@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import MainLayout from './components/layout/MainLayout/MainLayout';
+import AdminPanel from './components/views/AdminPanel/AdminPanel';
 import Home from './components/views/Home/Home';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <MainLayout>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='/panel' component={AdminPanel} />
         </Switch>
       </MainLayout>
     </BrowserRouter>

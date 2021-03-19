@@ -1,7 +1,7 @@
 @import '../../../styles/settings.scss';
 @import '../../../styles/mixins.scss';
 
-.Reservation {
+.Contact {
   margin: 2rem 0;
   height: 70vh;
   width: 100vw;
@@ -31,9 +31,20 @@
       height: 100%;
       width: 100%;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       flex-direction: column;
+
+      padding: 2rem;
+
+      & h2 {
+        margin: 2rem 0;
+      }
+      & p {
+        margin-top: 4rem;
+        padding: 2rem;
+        text-align: center;
+      }
     }
   }
 }
