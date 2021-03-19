@@ -20,7 +20,7 @@ function Offer() {
             <h3>Card 1</h3>
             <p>Card 1 text</p>
             <Link to='/'>
-              <button>Rooms</button>
+              <button className='btn'>Rooms</button>
             </Link>
           </div>
         </div>
@@ -34,7 +34,7 @@ function Offer() {
             <h3>Card 2</h3>
             <p>Card 2 text</p>
             <Link to='/'>
-              <button>Rooms</button>
+              <button className='btn'>Rooms</button>
             </Link>
           </div>
         </div>
@@ -48,7 +48,7 @@ function Offer() {
             <h3>Card 3</h3>
             <p>Card 3 text</p>
             <Link to='/'>
-              <button>Rooms</button>
+              <button className='btn'>Rooms</button>
             </Link>
           </div>
         </div>

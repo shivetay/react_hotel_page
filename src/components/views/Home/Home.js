@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Slider from '../../features/Slider/Slider';
 import Offer from '../../common/Offer/Offer';
+import Reservation from '../../common/Reservation/Reservation';
 
 class Home extends Component {
   static propTypes = {
@@ -14,8 +15,9 @@ class Home extends Component {
       <Fragment>
         <Slider />
         <Offer />
-        <p>rezerwacje</p>
+        <Reservation />
         <p>kontakt</p>
+        <p>footer</p>
       </Fragment>
     );
   }

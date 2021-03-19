@@ -13,6 +13,25 @@
 body {
   font-family: $font-paragraph;
   overflow-x: hidden;
+
+  // background-position: 0px 0px, 10px 10px;
+  // background-size: 20px 20px;
+  // background-image: linear-gradient(
+  //     45deg,
+  //     rgb(255, 139, 139) 25%,
+  //     transparent 25%,
+  //     transparent 75%,
+  //     rgb(255, 139, 139) 75%,
+  //     rgb(255, 139, 139) 100%
+  //   ),
+  //   linear-gradient(
+  //     45deg,
+  //     rgb(255, 139, 139) 25%,
+  //     white 25%,
+  //     white 75%,
+  //     rgb(255, 139, 139) 75%,
+  //     rgb(255, 139, 139) 100%
+  //   );
 }
 
 html {
@@ -34,6 +53,14 @@ html {
   }
 }
 
+h2 {
+  font-size: $header-h2;
+}
+
+p {
+  font-size: $font-large;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -45,6 +72,24 @@ li {
 }
 
 //TODO:
+
+.btn {
+  background: none;
+  border: 1px solid $color-alt-opa;
+  font-size: $font-normal;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: $color-alt-opa;
+  backdrop-filter: blur(5px);
+  color: $color-font-light;
+}
 
 button:focus {
   outline: none;
