@@ -9,13 +9,13 @@ const NavBar = ({ className }) => {
         <NavLink to='/'>Home</NavLink>
       </li>
       <li className={className + '__List-li'}>
-        <NavLink to='/'>Rooms</NavLink>
+        <NavLink to='/rooms'>Rooms</NavLink>
+      </li>
+      <li className={className + '__List-li'}>
+        <NavLink to='/'>Facilities</NavLink>
       </li>
       <li className={className + '__List-li'}>
         <NavLink to='/'>Reservation</NavLink>
-      </li>
-      <li className={className + '__List-li'}>
-        <NavLink to='/'>Contact</NavLink>
       </li>
     </ul>
   );

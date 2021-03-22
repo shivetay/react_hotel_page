@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import AdminPanel from './components/views/AdminPanel/AdminPanel';
 import Home from './components/views/Home/Home';
+import Rooms from './components/views/Rooms/RoomsContainer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/panel' component={AdminPanel} />
+          <Route exact path='/rooms' component={Rooms} />
         </Switch>
       </MainLayout>
     </BrowserRouter>

@@ -1,3 +1,44 @@
 {
-  "rooms": [{ "id": 1 }]
+  "rooms": [
+    {
+      "id": 1,
+      "beds": 1,
+      "type": "single",
+      "people": 1,
+      "photo": "photo",
+      "reservation": {}
+    },
+    {
+      "id": 2,
+      "beds": 1,
+      "type": "king",
+      "people": 2,
+      "photo": "photo",
+      "reservation": {}
+    },
+    {
+      "id": 3,
+      "beds": 2,
+      "type": "single",
+      "people": 2,
+      "photo": "photo",
+      "reservation": {}
+    },
+    {
+      "id": 4,
+      "beds": 2,
+      "type": "mix",
+      "people": 3,
+      "photo": "photo",
+      "reservation": {}
+    },
+    {
+      "id": 5,
+      "beds": 1,
+      "type": "king",
+      "people": 2,
+      "photo": "photo",
+      "reservation": {}
+    }
+  ]
 }
