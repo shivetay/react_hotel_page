@@ -5,7 +5,8 @@
       "beds": 1,
       "type": "single",
       "people": 1,
-      "photo": "photo",
+      "title": "Scots simple",
+      "photo": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1051&q=80",
       "reservation": {}
     },
     {
@@ -13,7 +14,8 @@
       "beds": 1,
       "type": "king",
       "people": 2,
-      "photo": "photo",
+      "title": "Scots creative",
+      "photo": "https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80",
       "reservation": {}
     },
     {
@@ -21,7 +23,8 @@
       "beds": 2,
       "type": "single",
       "people": 2,
-      "photo": "photo",
+      "title": "Scots comfort",
+      "photo": "https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "reservation": {}
     },
     {
@@ -29,7 +32,8 @@
       "beds": 2,
       "type": "mix",
       "people": 3,
-      "photo": "photo",
+      "title": "Scots home",
+      "photo": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "reservation": {}
     },
     {
@@ -37,7 +41,8 @@
       "beds": 1,
       "type": "king",
       "people": 2,
-      "photo": "photo",
+      "title": "Scots cave",
+      "photo": "https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80",
       "reservation": {}
     }
   ]

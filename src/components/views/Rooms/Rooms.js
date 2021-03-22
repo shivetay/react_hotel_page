@@ -1,28 +1,49 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
+import './Rooms.scss';
+
+import Room from './Room';
+import Logo from '../../common/Logo/Logo';
 
 class Rooms extends Component {
   static propTypes = {
     getRooms: PropTypes.func,
-    rooms: PropTypes.array.isRequired,
+    rooms: PropTypes.object.isRequired,
   };
 
   componentDidMount() {
     const { getRooms } = this.props;
     getRooms();
   }
-  render() {
+
+  renderRooms = () => {
     const {
       rooms: { rooms },
     } = this.props;
-
     return (
-      <div>
-        <h2>Rooms</h2>
+      <Fragment>
         {rooms.map((room) => (
-          <p key={room.id}>{room.type}</p>
+          <Room key={room.id} roomData={room} />
         ))}
-      </div>
+      </Fragment>
+    );
+  };
+  render() {
+    return (
+      <section className='Rooms'>
+        {this.renderRooms()}
+        <div className='Reservation-btn'>
+          <div className='Reservation-content'>
+            <Link to='/reservation'>
+              <button className='Reservation-btn'>
+                <h2>Check more rooms!!</h2>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     );
   }
 }

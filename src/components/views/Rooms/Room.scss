@@ -1,0 +1,56 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Room {
+  &__Card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50rem;
+    height: 55rem;
+    background: $color-main-opa;
+    backdrop-filter: blur(5px);
+    padding: 2rem 4rem;
+    margin: 2rem 3rem;
+    border-radius: 10px;
+
+    & h3 {
+      margin-top: 1.4rem;
+    }
+  }
+
+  &__Image {
+    padding: 2rem auto;
+    & img {
+      margin-top: 2rem;
+      width: 100%;
+      border-radius: 5px;
+      border: 2px solid $color-bacground;
+      padding: 6px;
+    }
+  }
+
+  &__Description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+  }
+  &__Icons {
+    font-size: $header-h2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .icon {
+      margin: 1rem;
+      color: $color-font-light;
+    }
+    & span {
+      font-weight: 600;
+    }
+  }
+}
