@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed, faMale } from '@fortawesome/free-solid-svg-icons';
+import { faBed, faMale, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 
 import './Room.scss';
 
-function Room({ roomData: { id, title, photo, type, people } }) {
+function Room({ roomData: { id, title, photo, type, people, price } }) {
   return (
     <Fragment>
       <div className='Room__Card' key={id}>
@@ -23,6 +23,10 @@ function Room({ roomData: { id, title, photo, type, people } }) {
           <div className='Room__Icons'>
             <FontAwesomeIcon className='icon' icon={faMale} />
             <span>{people}</span>
+          </div>
+          <div className='Room__Icons'>
+            <FontAwesomeIcon className='icon' icon={faMoneyBill} />
+            <span>{price} &#163;</span>
           </div>
         </div>
         <Link to='/reservation'>

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import './Rooms.scss';
 
 import Room from './Room';
-import Logo from '../../common/Logo/Logo';
 
 class Rooms extends Component {
   static propTypes = {

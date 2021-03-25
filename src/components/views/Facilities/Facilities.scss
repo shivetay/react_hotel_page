@@ -1,0 +1,48 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Facilities {
+  width: 100vw;
+  height: 100vh;
+  &__Card {
+    display: flex;
+    height: 100vh;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__Card:nth-of-type(even) {
+    flex-direction: row-reverse;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__Img {
+    height: 100%;
+    width: 50%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__Description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

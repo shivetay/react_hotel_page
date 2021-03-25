@@ -13,10 +13,10 @@ const MobileNav = ({ className }) => {
           <NavLink to='/'>Rooms</NavLink>
         </li>
         <li className={className + '__Mobile-li'}>
-          <NavLink to='/'>Reservation</NavLink>
+          <NavLink to='/facilities'>Facilities</NavLink>
         </li>
         <li className={className + '__Mobile-li'}>
-          <NavLink to='/'>Contact</NavLink>
+          <NavLink to='/'>Reservation</NavLink>
         </li>
       </ul>
     </div>
