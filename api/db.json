@@ -51,6 +51,11 @@
       "reservation": {}
     }
   ],
+
+  "reservationForm": {
+    "beds": ["king", "mix", "single"],
+    "people": [1, 2, 3, 4]
+  },
   "users": {
     "login": "ScotAdmin",
     "name": "Scot",
