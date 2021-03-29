@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import ReservationMain from './components/views/ReservationForm/ReservationMain';
+import ReservationContainer from './components/views/ReservationForm/ReservationContainer';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import AdminPanel from './components/views/AdminPanel/AdminPanel';
 import Facilities from './components/views/Facilities/Facilities';
@@ -17,7 +17,7 @@ function App() {
           <Route exact path='/panel' component={AdminPanel} />
           <Route exact path='/rooms' component={Rooms} />
           <Route exact path='/facilities' component={Facilities} />
-          <Route exact path='/reservation' component={ReservationMain} />
+          <Route exact path='/reservation' component={ReservationContainer} />
         </Switch>
       </MainLayout>
     </BrowserRouter>

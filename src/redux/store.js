@@ -3,11 +3,13 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
 import roomsReducer from './RoomsReducer';
+import reservationReducer from './ReservationReducer';
 
 const initialState = {};
 
 const reducers = {
   rooms: roomsReducer,
+  reservation: reservationReducer,
 };
 
 // add blank reducers for initial state properties without reducers
