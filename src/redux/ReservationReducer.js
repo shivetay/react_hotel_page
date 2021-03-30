@@ -10,19 +10,23 @@ const createActionName = (name) => `app/${reducerName}/${name}`;
 export const SEARCH_ROOMS = createActionName('SEARCH_ROOMS');
 export const ERROR_LOADING = createActionName('ERROR_LOADING');
 export const LOAD_SUCCESS = createActionName('LOAD_SUCCESS');
+export const ROOM_LOADING = createActionName('ROOM_LOADING');
 
 /* action creators */
 
 export const searchRooms = (payload) => ({ payload, type: SEARCH_ROOMS });
 export const errorLoading = (payload) => ({ payload, type: ERROR_LOADING });
 export const loadSuccess = (payload) => ({ payload, type: LOAD_SUCCESS });
+export const roomLoading = (payload) => ({ payload, type: ROOM_LOADING });
+
 /* thunk */
 
-export const fetchSearchRequest = (bedId, bedType) => {
+export const fetchSearchRequest = (peopleId, bedType) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`http://localhost:4000/rooms?beds=${bedId}`);
-      console.log(res.data);
+      const res = await axios.get(
+        `http://localhost:4000/rooms?people=${peopleId}`
+      );
       dispatch(searchRooms(res.data));
       dispatch(loadSuccess({ name: 'LOAD_SUCCESS' }));
     } catch (err) {
@@ -39,10 +43,10 @@ const initialState = {
 
 /* reducer */
 
-export default function reducer(state = initialState, action = {}) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SEARCH_ROOMS:
-      return { ...state, rooms: action.payload, loading: false };
+      return { ...state, rooms: action.payload, loading: true };
 
     case ERROR_LOADING:
       return {
@@ -55,6 +59,9 @@ export default function reducer(state = initialState, action = {}) {
         ...state,
         loading: false,
       };
+
+    case ROOM_LOADING:
+      return { ...state, loading: true };
 
     default:
       return state;

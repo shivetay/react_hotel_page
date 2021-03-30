@@ -1,0 +1,28 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Reservation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  &__Form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20rem;
+    background: $color-main-opa;
+
+    & .form-text {
+      font-size: $font-big;
+      font-weight: 700;
+    }
+    & .browser-default {
+      width: 5rem;
+      height: 3rem;
+      margin: 1rem;
+      font-size: $font-big;
+    }
+  }
+}

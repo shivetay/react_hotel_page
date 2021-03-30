@@ -1,22 +1,21 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Room from '../Rooms/Room';
+// import Room from '../Rooms/Room';
 
-import ReservationDate from './ReservationDate';
+// import ReservationDate from './ReservationDate';
 
 const ReservationForm = ({
   formData: { beds, people },
   roomsSearch,
-  roomData,
+  roomsData,
   onSubmit,
   onChange,
   loading,
 }) => {
-  console.log(roomData, 'rd');
   const renderForm = () => {
     return (
-      <form onSubmit={(e) => onSubmit(e)}>
+      <form onSubmit={(e) => onSubmit(e)} className='Reservation__Form'>
         <div className='input-field'>
           <select
             className='browser-default'
@@ -31,7 +30,7 @@ const ReservationForm = ({
           </select>
           <small className='form-text'>How many people?</small>
         </div>
-        <div className='input-field'>
+        {/* <div className='input-field'>
           <select
             className='browser-default'
             name='beds'
@@ -43,31 +42,28 @@ const ReservationForm = ({
             <option value='single'>MERN</option>
           </select>
           <small className='form-text'>Select beds?</small>
-        </div>
-        <ReservationDate />
+        </div> */}
         <input type='submit' className='btn' value='Search rooms' />
       </form>
     );
   };
 
-  const renderRooms = () => {
-    if (loading === true || roomData === undefined) {
-      console.log(roomData);
-      return <h2>Search your Room!!</h2>;
-    } else {
-      return console.log('loading');
-
-      //  {roomData.map((room) => (
-      //     <Room key={room.id} roomData={room} />
-      //   ))}
-    }
-  };
+  // const renderRooms = () => {
+  //   if (!loading) {
+  //     roomsData.map((room) => {
+  //       console.log(room, 'room');
+  //       return <Room key={room.id} roomData={room} />;
+  //     });
+  //   } else {
+  //     return <h2>Search your Room!!</h2>;
+  //   }
+  // };
 
   return (
     <Fragment>
-      <h1>Book your room</h1>
+      {/* <h1>Search your room</h1> */}
       {renderForm()}
-      {renderRooms()}
+      {/* {renderRooms()} */}
     </Fragment>
   );
 };

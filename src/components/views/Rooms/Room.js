@@ -8,6 +8,7 @@ import { faBed, faMale, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 import './Room.scss';
 
 function Room({ roomData: { id, title, photo, type, people, price } }) {
+  console.log(id);
   return (
     <Fragment>
       <div className='Room__Card' key={id}>

@@ -21,7 +21,7 @@ const Reservation = () => {
                 Ad sed necessitatibus labore molestias nemo ea nobis dignissimos
                 eos.
               </p>
-              <Link to=''>
+              <Link to='/reservation'>
                 <button className='btn'>Book!</button>
               </Link>
             </div>
