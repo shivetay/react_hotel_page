@@ -30,7 +30,7 @@ function Room({ roomData: { id, title, photo, type, people, price } }) {
             <span>{price} &#163;</span>
           </div>
         </div>
-        <Link to='/reservation'>
+        <Link to='/booking'>
           <button className='btn'>Book Now</button>
         </Link>
       </div>

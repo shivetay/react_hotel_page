@@ -14,16 +14,16 @@ class ReservationMain extends Component {
     },
   };
 
-  componentDidMount() {
-    const { loading } = this.props;
-    loading();
-  }
-
   static propTypes = {
     searchRooms: PropTypes.func,
     reservation: PropTypes.object.isRequired,
     loading: PropTypes.func,
   };
+
+  componentDidMount() {
+    const { loading } = this.props;
+    loading();
+  }
 
   onChange = (e) => {
     // setting formData in the state properly
@@ -64,15 +64,17 @@ class ReservationMain extends Component {
     const { load, ...formData } = this.state;
     return (
       <section className='Reservation'>
-        <ReservationForm
-          roomsData={rooms}
-          formData={formData}
-          roomsSearch={searchRooms}
-          loading={loading}
-          onSubmit={this.onSubmit}
-          onChange={this.onChange}
-        />
-        {this.renderRooms()}
+        <div className='Reservation__Container'>
+          <ReservationForm
+            roomsData={rooms}
+            formData={formData}
+            roomsSearch={searchRooms}
+            loading={loading}
+            onSubmit={this.onSubmit}
+            onChange={this.onChange}
+          />
+          {this.renderRooms()}
+        </div>
       </section>
     );
   }
