@@ -7,7 +7,7 @@ import AdminPanel from './components/views/AdminPanel/AdminPanel';
 import Facilities from './components/views/Facilities/Facilities';
 import Home from './components/views/Home/Home';
 import Rooms from './components/views/Rooms/RoomsContainer';
-import Booking from './components/views/Booking/Booking';
+import Booking from './components/views/Booking/BookingContainer';
 
 function App() {
   return (

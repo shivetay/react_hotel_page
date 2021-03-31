@@ -4,12 +4,14 @@ import thunk from 'redux-thunk';
 
 import roomsReducer from './RoomsReducer';
 import reservationReducer from './ReservationReducer';
+import bookingReducer from './BookingReducer';
 
 const initialState = {};
 
 const reducers = {
   rooms: roomsReducer,
   reservation: reservationReducer,
+  booking: bookingReducer,
 };
 
 // add blank reducers for initial state properties without reducers

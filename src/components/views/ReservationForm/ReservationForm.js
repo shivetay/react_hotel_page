@@ -1,18 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-// import Room from '../Rooms/Room';
-
-// import ReservationDate from './ReservationDate';
-
-const ReservationForm = ({
-  formData: { beds, people },
-  roomsSearch,
-  roomsData,
-  onSubmit,
-  onChange,
-  loading,
-}) => {
+const ReservationForm = ({ formData: { people }, onSubmit, onChange }) => {
   const renderForm = () => {
     return (
       <form onSubmit={(e) => onSubmit(e)} className='Reservation__Form'>
@@ -48,24 +37,7 @@ const ReservationForm = ({
     );
   };
 
-  // const renderRooms = () => {
-  //   if (!loading) {
-  //     roomsData.map((room) => {
-  //       console.log(room, 'room');
-  //       return <Room key={room.id} roomData={room} />;
-  //     });
-  //   } else {
-  //     return <h2>Search your Room!!</h2>;
-  //   }
-  // };
-
-  return (
-    <Fragment>
-      {/* <h1>Search your room</h1> */}
-      {renderForm()}
-      {/* {renderRooms()} */}
-    </Fragment>
-  );
+  return <Fragment>{renderForm()}</Fragment>;
 };
 
 ReservationForm.propTypes = {

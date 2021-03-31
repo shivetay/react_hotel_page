@@ -18,6 +18,9 @@ const MobileNav = ({ className }) => {
         <li className={className + '__Mobile-li'}>
           <NavLink to='/reservation'>Reservation</NavLink>
         </li>
+        <li className={className + '__Mobile-li'}>
+          <NavLink to='/booking'>Booking</NavLink>
+        </li>
       </ul>
     </div>
   );

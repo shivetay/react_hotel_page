@@ -8,7 +8,6 @@ import { faBed, faMale, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 import './Room.scss';
 
 function Room({ roomData: { id, title, photo, type, people, price } }) {
-  console.log(id);
   return (
     <Fragment>
       <div className='Room__Card' key={id}>
@@ -30,7 +29,7 @@ function Room({ roomData: { id, title, photo, type, people, price } }) {
             <span>{price} &#163;</span>
           </div>
         </div>
-        <Link to='/booking'>
+        <Link to={{ pathname: '/booking', roomId: { id } }}>
           <button className='btn'>Book Now</button>
         </Link>
       </div>

@@ -17,6 +17,9 @@ const NavBar = ({ className }) => {
       <li className={className + '__List-li'}>
         <NavLink to='/reservation'>Reservation</NavLink>
       </li>
+      <li className={className + '__List-li'}>
+        <NavLink to='/booking'>Booking</NavLink>
+      </li>
     </ul>
   );
 };
