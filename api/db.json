@@ -47,17 +47,8 @@
     }
   ],
   "reservationForm": {
-    "beds": [
-      "king",
-      "mix",
-      "single"
-    ],
-    "people": [
-      1,
-      2,
-      3,
-      4
-    ]
+    "beds": ["king", "mix", "single"],
+    "people": [1, 2, 3, 4]
   },
   "users": {
     "login": "ScotAdmin",
@@ -65,53 +56,5 @@
     "password": "admin1234",
     "admin": true
   },
-  "booking": [
-    {
-      "id": 1,
-      "name": "test",
-      "email": "",
-      "start": "",
-      "end": "",
-      "roomId": "1"
-    },
-    {
-      "id": 2,
-      "name": "test1",
-      "email": "",
-      "start": "",
-      "end": "",
-      "roomId": "1"
-    },
-    {
-      "id": 3,
-      "name": "test1",
-      "email": "",
-      "start": "",
-      "end": "",
-      "roomId": "4"
-    },
-    {
-      "id": 4,
-      "name": "test4",
-      "email": "",
-      "start": "",
-      "end": "",
-      "roomId": "4"
-    },
-    {
-      "people": "1",
-      "rooms": "",
-      "name": "ŁUKASZ DAWIDOWICZ",
-      "mail": "shivetay@gmail.com",
-      "room": "2",
-      "id": 5
-    },
-    {
-      "people": "1",
-      "roomId": "3",
-      "name": "ŁUKASZ DAWIDOWICZ",
-      "mail": "shivetay@gmail.com",
-      "id": 6
-    }
-  ]
+  "booking": []
 }

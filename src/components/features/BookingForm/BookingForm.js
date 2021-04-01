@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import ReservationDate from '../../views/ReservationForm/ReservationDate';
 
-function BookingForm(props) {
+function BookingForm() {
   return (
     <section>
       <form className='Reservation__Form'>
@@ -22,7 +21,5 @@ function BookingForm(props) {
     </section>
   );
 }
-
-BookingForm.propTypes = {};
 
 export default BookingForm;

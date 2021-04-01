@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import './Booking.scss';
 
-import ReservationDate from '../../views/ReservationForm/ReservationDate';
+// import ReservationDate from '../../views/ReservationForm/ReservationDate';
 
 class Booking extends Component {
   static propTypes = {
-    roomid: PropTypes.number.isRequired,
+    roomid: PropTypes.number,
     newBookign: PropTypes.func,
   };
   state = {
@@ -52,7 +52,7 @@ class Booking extends Component {
 
   render() {
     const {
-      formData: { people, roomId, name, mail },
+      formData: { people, roomId, name, mail, end, start },
     } = this.state;
     return (
       <section className='Booking'>
@@ -71,13 +71,18 @@ class Booking extends Component {
             </div>
             <div className='Booking__Fields'>
               <small className='form-text'>Room</small>
-              <input
-                className='input'
-                type='text'
+              <select
+                className='browser-default'
                 name='roomId'
                 value={roomId}
-                onChange={this.onChange}
-              />
+                onChange={this.onChange}>
+                <option value='0'>* Select Room</option>
+                <option value='1'>Scots simple</option>
+                <option value='2'>Scots creative</option>
+                <option value='3'>Scots comfort</option>
+                <option value='4'>Scots home</option>
+                <option value='5'>Scots cave</option>
+              </select>
             </div>
             <div className='Booking__Fields'>
               <small className='form-text'>Name</small>
@@ -103,7 +108,22 @@ class Booking extends Component {
           <div className='Booking__Fields-container'>
             <div className='Booking__Fields'>
               <small className='form-text'>Dates</small>
-              <ReservationDate />
+              <input
+                className='Booking-calendar'
+                type='date'
+                id='end'
+                name='start'
+                value={start}
+                onChange={this.onChange}
+              />
+              <input
+                className='Booking-calendar'
+                type='date'
+                id='end'
+                name='end'
+                value={end}
+                onChange={this.onChange}
+              />
               <input
                 type='submit'
                 className='btn Booking-btn'
