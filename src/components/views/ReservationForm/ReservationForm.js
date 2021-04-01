@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ReservationForm = ({ formData: { people }, onSubmit, onChange }) => {
   const renderForm = () => {
     return (
-      <form onSubmit={(e) => onSubmit(e)} className='Reservation__Form'>
+      <form onSubmit={(e) => onSubmit(e)} className='ReservationMain__Form'>
         <div className='input-field'>
           <select
             className='browser-default'

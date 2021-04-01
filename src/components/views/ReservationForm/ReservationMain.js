@@ -63,8 +63,8 @@ class ReservationMain extends Component {
     } = this.props;
     const { load, ...formData } = this.state;
     return (
-      <section className='Reservation'>
-        <div className='Reservation__Container'>
+      <section className='ReservationMain'>
+        <div className='ReservationMain__Container'>
           <ReservationForm
             roomsData={rooms}
             formData={formData}

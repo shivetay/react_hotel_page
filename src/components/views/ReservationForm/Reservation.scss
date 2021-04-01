@@ -1,7 +1,7 @@
 @import '../../../styles/settings.scss';
 @import '../../../styles/mixins.scss';
 
-.Reservation {
+.ReservationMain {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -20,8 +20,9 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: 20rem;
+    height: 35%;
     background: $color-main-opa;
+    margin-top: 2rem;
 
     & .form-text {
       font-size: $font-big;
