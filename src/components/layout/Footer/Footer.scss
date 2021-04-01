@@ -1,0 +1,10 @@
+@import '../../../styles/settings.scss';
+@import '../../../styles/mixins.scss';
+
+.Footer {
+  background: $color-main-opa;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

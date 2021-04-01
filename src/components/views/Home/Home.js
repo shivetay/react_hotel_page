@@ -18,7 +18,6 @@ class Home extends Component {
         <Offer />
         <Reservation />
         <Contact />
-        <p>footer</p>
       </Fragment>
     );
   }
