@@ -3,7 +3,7 @@ import axios from 'axios';
 const url =
   '//' +
   window.location.hostname +
-  (window.location.hostname == 'localhost' ? ':4000' : '');
+  (window.location.hostname === 'localhost' ? ':4000' : '');
 
 /* action creator name */
 
@@ -33,10 +33,7 @@ export const createSuccess = (payload) => ({
 export const bookingPost = (bookingData) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post(
-        'http://localhost:4000/booking',
-        bookingData
-      );
+      const res = await axios.post(`http://%{url}/booking`, bookingData);
       dispatch(createBookingAction(res.data));
       dispatch(createSuccess({ name: 'CREATE_BOOKING' }));
     } catch (err) {

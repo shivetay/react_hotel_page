@@ -3,7 +3,7 @@ import axios from 'axios';
 const url =
   '//' +
   window.location.hostname +
-  (window.location.hostname == 'localhost' ? ':4000' : '');
+  (window.location.hostname === 'localhost' ? ':4000' : '');
 
 /* action creator name */
 
