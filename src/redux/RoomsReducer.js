@@ -55,6 +55,7 @@ export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case FETCH_ROOMS:
       return { ...state, rooms: action.payload, loading: false };
+
     case SEARCH_ROOM:
       return { ...state, room: action.payload, loading: false };
 

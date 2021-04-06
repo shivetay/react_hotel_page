@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 
 import './Booking.scss';
 
-// import ReservationDate from '../../views/ReservationForm/ReservationDate';
-
 class Booking extends Component {
   static propTypes = {
-    roomid: PropTypes.number,
+    roomId: PropTypes.object,
     newBookign: PropTypes.func,
+    getRoom: PropTypes.func,
   };
   state = {
     formData: {
@@ -21,16 +20,12 @@ class Booking extends Component {
     },
   };
 
-  // componentDidMount() {
-  //   const { roomid } = this.props.location;
-  //   // this.getRoomData(roomid);
-  //   console.log(roomid);
-  // }
-  // componentDidUpdate(){
-
-  // }
-
-  getRoomData(roomData) {}
+  componentDidMount() {
+    const { ...roomId } = this.props.location;
+    const { getRoom } = this.props;
+    getRoom(roomId.roomId.rId);
+    console.log(roomId.roomId.rId);
+  }
 
   onChange = (e) => {
     // setting formData in the state properly

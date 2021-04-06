@@ -9,6 +9,7 @@ import Room from './Room';
 class Rooms extends Component {
   static propTypes = {
     getRooms: PropTypes.func,
+    getOneRoom: PropTypes.func,
     rooms: PropTypes.object.isRequired,
   };
 

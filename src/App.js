@@ -7,7 +7,7 @@ import AdminPanel from './components/views/AdminPanel/AdminPanel';
 import Facilities from './components/views/Facilities/Facilities';
 import Home from './components/views/Home/Home';
 import Rooms from './components/views/Rooms/RoomsContainer';
-import Booking from './components/views/Booking/BookingContainer';
+import BookingContainer from './components/views/Booking/BookingContainer';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route exact path='/rooms' component={Rooms} />
           <Route exact path='/facilities' component={Facilities} />
           <Route exact path='/reservation' component={ReservationContainer} />
-          <Route exact path='/booking' component={Booking} />
+          <Route exact path='/booking' component={BookingContainer} />
         </Switch>
       </MainLayout>
     </BrowserRouter>

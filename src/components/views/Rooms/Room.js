@@ -29,7 +29,7 @@ function Room({ roomData: { id, title, photo, type, people, price } }) {
             <span>{price} &#163;</span>
           </div>
         </div>
-        <Link to={{ pathname: '/booking', roomId: { id } }}>
+        <Link to={{ pathname: '/booking', roomId: { rId: id } }}>
           <button className='btn'>Book Now</button>
         </Link>
       </div>

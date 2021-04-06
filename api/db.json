@@ -47,8 +47,17 @@
     }
   ],
   "reservationForm": {
-    "beds": ["king", "mix", "single"],
-    "people": [1, 2, 3, 4]
+    "beds": [
+      "king",
+      "mix",
+      "single"
+    ],
+    "people": [
+      1,
+      2,
+      3,
+      4
+    ]
   },
   "users": {
     "login": "ScotAdmin",
@@ -56,5 +65,15 @@
     "password": "admin1234",
     "admin": true
   },
-  "booking": []
+  "booking": [
+    {
+      "people": "1",
+      "roomId": "3",
+      "name": "ŁUKASZ DAWIDOWICZ",
+      "mail": "shivetay@gmail.com",
+      "start": "2021-04-06",
+      "end": "2021-04-14",
+      "id": 1
+    }
+  ]
 }

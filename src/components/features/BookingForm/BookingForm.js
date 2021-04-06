@@ -1,3 +1,5 @@
+/* not in use */
+
 import React from 'react';
 
 import ReservationDate from '../../views/ReservationForm/ReservationDate';
