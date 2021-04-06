@@ -20,18 +20,18 @@ class Booking extends Component {
     },
   };
 
-  componentDidMount() {
-    const { ...roId } = this.props.location;
-    const { getRoom } = this.props;
+  // componentDidMount() {
+  //   const { ...roomId } = this.props.location;
+  //   const { getRoom } = this.props;
 
-    if (roId.roomId.rId === undefined || roId.roomId.rId === null) {
-      this.setState({ roomId: '' });
-    } else {
-      getRoom(roId.roomId.rId);
-    }
-    // getRoom(roId.roomId.rId);
-    // console.log(roomId.roomId.rId);
-  }
+  //   if (roomId.roomId.rId === undefined || roomId.roomId.rId === null) {
+  //     this.setState({ roomId: '' });
+  //   } else {
+  //     getRoom(roomId.roomId.rId);
+  //   }
+  //   // getRoom(roId.roomId.rId);
+  //   // console.log(roomId.roomId.rId);
+  // }
 
   onChange = (e) => {
     // setting formData in the state properly
