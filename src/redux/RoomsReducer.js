@@ -27,7 +27,7 @@ export const searchRoom = (payload) => ({ payload, type: SEARCH_ROOM });
 export const fetchRoomsRequest = () => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`http://${url}/rooms`);
+      const res = await axios.get(`http://localhost:4000/rooms`);
       dispatch(fetchRooms(res.data));
     } catch (err) {
       dispatch(errorLoading({ name: 'FETCH_ROOMS', error: err.message }));

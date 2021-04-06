@@ -29,7 +29,9 @@ export const roomLoading = (payload) => ({ payload, type: ROOM_LOADING });
 export const fetchSearchRequest = (peopleId, bedType) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`http://${url}/rooms?people=${peopleId}`);
+      const res = await axios.get(
+        `http://localhost:localhost:4000/rooms?people=${peopleId}`
+      );
       dispatch(searchRooms(res.data));
       dispatch(loadSuccess({ name: 'LOAD_SUCCESS' }));
     } catch (err) {

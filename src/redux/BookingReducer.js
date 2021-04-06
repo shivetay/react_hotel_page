@@ -39,7 +39,10 @@ export const roomLoaded = (payload) => ({ payload, type: ROOM_LOADED });
 export const bookingPost = (bookingData) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post(`http://${url}/booking`, bookingData);
+      const res = await axios.post(
+        `http://localhost:4000/booking`,
+        bookingData
+      );
       dispatch(createBookingAction(res.data));
       dispatch(createSuccess({ name: 'CREATE_BOOKING' }));
     } catch (err) {
