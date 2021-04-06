@@ -39,7 +39,6 @@ export const searchRoomRequest = (roomId) => {
   return async (dispatch) => {
     try {
       const res = await axios.get(`http://${url}/rooms/${roomId}`);
-      console.log(res.data);
       dispatch(searchRoom(res.data));
     } catch (err) {
       dispatch(errorLoading({ name: 'FETCH_ROOMS', error: err.message }));
