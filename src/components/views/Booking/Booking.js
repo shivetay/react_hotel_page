@@ -8,6 +8,7 @@ class Booking extends Component {
     roId: PropTypes.object,
     newBookign: PropTypes.func,
     getRoom: PropTypes.func,
+    loading: PropTypes.bool,
   };
   state = {
     formData: {
@@ -20,18 +21,16 @@ class Booking extends Component {
     },
   };
 
-  // componentDidMount() {
-  //   const { ...roomId } = this.props.location;
-  //   const { getRoom } = this.props;
-
-  //   if (roomId.roomId.rId === undefined || roomId.roomId.rId === null) {
-  //     this.setState({ roomId: '' });
-  //   } else {
-  //     getRoom(roomId.roomId.rId);
-  //   }
-  //   // getRoom(roId.roomId.rId);
-  //   // console.log(roomId.roomId.rId);
-  // }
+  async componentDidMount() {
+    const { ...roomId } = this.props.location;
+    const { getRoom, loading } = this.props;
+    if (!loading) {
+      getRoom(roomId.roomId.rId);
+      console.log(roomId.roomId.rId);
+    }
+    console.log(loading);
+    console.log(this.props);
+  }
 
   onChange = (e) => {
     // setting formData in the state properly

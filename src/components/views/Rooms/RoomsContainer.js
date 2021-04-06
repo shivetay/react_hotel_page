@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
 
-import {
-  fetchRoomsRequest,
-  searchRoomRequest,
-} from '../../../redux/RoomsReducer';
+import { fetchRoomsRequest } from '../../../redux/RoomsReducer';
+import { searchRoomRequest } from '../../../redux/BookingReducer';
 import Rooms from './Rooms';
 
 const mapStateToProps = (state) => ({

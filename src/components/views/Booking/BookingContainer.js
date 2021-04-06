@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
 
-import { searchRoomRequest } from '../../../redux/RoomsReducer';
-import { bookingPost } from '../../../redux/BookingReducer';
+import { bookingPost, searchRoomRequest } from '../../../redux/BookingReducer';
 
 import Booking from './Booking';
 
 const mapStateToProps = (state) => ({
   room: state.room,
-  loading: state.loading,
+  loading: state.booking.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({

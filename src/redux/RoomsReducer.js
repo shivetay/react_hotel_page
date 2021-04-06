@@ -35,17 +35,6 @@ export const fetchRoomsRequest = () => {
   };
 };
 
-export const searchRoomRequest = (roomId) => {
-  return async (dispatch) => {
-    try {
-      const res = await axios.get(`http://${url}/rooms/${roomId}`);
-      dispatch(searchRoom(res.data));
-    } catch (err) {
-      dispatch(errorLoading({ name: 'FETCH_ROOMS', error: err.message }));
-    }
-  };
-};
-
 /* initial state */
 const initialState = {
   rooms: [],
