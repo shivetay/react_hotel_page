@@ -1,5 +1,10 @@
 import axios from 'axios';
 
+const url =
+  '//' +
+  window.location.hostname +
+  (window.location.hostname == 'localhost' ? ':4000' : '');
+
 /* action creator name */
 
 const reducerName = 'rooms';
@@ -22,7 +27,7 @@ export const searchRoom = (payload) => ({ payload, type: SEARCH_ROOM });
 export const fetchRoomsRequest = () => {
   return async (dispatch) => {
     try {
-      const res = await axios.get('http://localhost:4000/rooms');
+      const res = await axios.get(`http://${url}/rooms`);
       dispatch(fetchRooms(res.data));
     } catch (err) {
       dispatch(errorLoading({ name: 'FETCH_ROOMS', error: err.message }));
@@ -33,7 +38,7 @@ export const fetchRoomsRequest = () => {
 export const searchRoomRequest = (roomId) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`http://localhost:4000/rooms/${roomId}`);
+      const res = await axios.get(`http://${url}/rooms/${roomId}`);
       console.log(res.data);
       dispatch(searchRoom(res.data));
     } catch (err) {
