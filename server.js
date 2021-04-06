@@ -10,6 +10,7 @@ const middlewares = jsonServer.defaults({
 });
 const port = process.env.PORT || 4000;
 
+server.use('/db');
 server.use(middlewares);
 server.use(router);
 
