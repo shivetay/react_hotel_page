@@ -37,7 +37,7 @@ export const roomLoaded = (payload) => ({ payload, type: ROOM_LOADED });
 export const bookingPost = (bookingData) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post(`https://${url}/booking`, bookingData);
+      const res = await axios.post(`http://${url}/booking`, bookingData);
       dispatch(setAlert('Booking created', 'success'));
       dispatch(createBookingAction(res.data));
       dispatch(createSuccess({ name: 'CREATE_BOOKING' }));
@@ -51,7 +51,7 @@ export const bookingPost = (bookingData) => {
 export const searchRoomRequest = (roomId) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`https://${url}/rooms/${roomId}`);
+      const res = await axios.get(`http://${url}/rooms/${roomId}`);
       dispatch(searchRoom(res.data));
       dispatch(roomLoaded({ name: 'ROOM_LOADED' }));
     } catch (err) {

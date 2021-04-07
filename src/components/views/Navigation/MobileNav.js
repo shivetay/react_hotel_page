@@ -10,7 +10,7 @@ const MobileNav = ({ className }) => {
           <NavLink to='/'>Home</NavLink>
         </li>
         <li className={className + '__Mobile-li'}>
-          <NavLink to='/'>Rooms</NavLink>
+          <NavLink to='/rooms'>Rooms</NavLink>
         </li>
         <li className={className + '__Mobile-li'}>
           <NavLink to='/facilities'>Facilities</NavLink>
