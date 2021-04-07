@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --port 4000 --no-cors --delay 550 --watch api/db.json ",
+    "server": "json-server --port 4000 --no-cors --delay 650 --watch api/db.json ",
     "start": "node server.js"
   },
   "eslintConfig": {
@@ -49,6 +49,7 @@
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {

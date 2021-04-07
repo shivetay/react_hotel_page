@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const url =
-  '//' +
-  window.location.hostname +
-  (window.location.hostname == 'localhost' ? ':4000' : '');
+import { setAlert } from './AlertReducer';
+import { url } from '../config';
 
 /* action creator name */
 
@@ -30,7 +28,8 @@ export const fetchRoomsRequest = () => {
       const res = await axios.get(`https://${url}/rooms`);
       dispatch(fetchRooms(res.data));
     } catch (err) {
-      dispatch(errorLoading({ name: 'FETCH_ROOMS', error: err.message }));
+      dispatch(setAlert(err.message, 'danger'));
+      dispatch(errorLoading({ name: 'FETCH_ROOMS' }));
     }
   };
 };

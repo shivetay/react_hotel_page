@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import roomsReducer from './RoomsReducer';
 import reservationReducer from './ReservationReducer';
 import bookingReducer from './BookingReducer';
+import alertReducer from './AlertReducer';
 
 const initialState = {};
 
@@ -12,6 +13,7 @@ const reducers = {
   rooms: roomsReducer,
   reservation: reservationReducer,
   booking: bookingReducer,
+  alerts: alertReducer,
 };
 
 // add blank reducers for initial state properties without reducers

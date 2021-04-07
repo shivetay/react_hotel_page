@@ -8,11 +8,13 @@ import Facilities from './components/views/Facilities/Facilities';
 import Home from './components/views/Home/Home';
 import Rooms from './components/views/Rooms/RoomsContainer';
 import BookingContainer from './components/views/Booking/BookingContainer';
+import Alert from './components/common/Alert/AlertContainer';
 
 function App() {
   return (
     <BrowserRouter>
       <MainLayout>
+        <Alert />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/panel' component={AdminPanel} />

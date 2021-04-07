@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const url =
-  '//' +
-  window.location.hostname +
-  (window.location.hostname == 'localhost' ? ':4000' : '');
+import { setAlert } from './AlertReducer';
+import { url } from '../config';
 
 /* action creator name */
 
@@ -40,10 +38,12 @@ export const bookingPost = (bookingData) => {
   return async (dispatch) => {
     try {
       const res = await axios.post(`https://${url}/booking`, bookingData);
+      dispatch(setAlert('Booking created', 'success'));
       dispatch(createBookingAction(res.data));
       dispatch(createSuccess({ name: 'CREATE_BOOKING' }));
     } catch (err) {
-      dispatch(createFailed({ name: 'CREATE_BOOKING', error: err.message }));
+      dispatch(setAlert(err.message, 'danger'));
+      dispatch(createFailed({ name: 'CREATE_BOOKING' }));
     }
   };
 };

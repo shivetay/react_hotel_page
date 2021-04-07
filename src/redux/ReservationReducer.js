@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const url =
-  '//' +
-  window.location.hostname +
-  (window.location.hostname == 'localhost' ? ':4000' : '');
+import { setAlert } from './AlertReducer';
+import { url } from '../config';
 
 /* action creator name */
 
@@ -33,7 +31,8 @@ export const fetchSearchRequest = (peopleId, bedType) => {
       dispatch(searchRooms(res.data));
       dispatch(loadSuccess({ name: 'LOAD_SUCCESS' }));
     } catch (err) {
-      dispatch(errorLoading({ name: 'SEARCH_ROOMS', error: err.message }));
+      dispatch(setAlert(err.message, 'danger'));
+      dispatch(errorLoading({ name: 'SEARCH_ROOMS' }));
     }
   };
 };
